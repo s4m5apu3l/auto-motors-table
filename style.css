@@ -91,3 +91,7 @@ h2 {
 		color: #5d5fef;
 	}
 }
+
+.l-estimate__upload-btns button:hover {
+	background-color: #5d5fef3f;
+}
