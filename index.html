@@ -4,6 +4,15 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
 		<main>
@@ -17,9 +26,13 @@
 							loading="lazy"
 						/>
 
-						<div>
-							<h4 class="c-font-16 medium">Вы можете загрузить файл или заполнить список артикулов</h4>
-							<p style="margin-top: 15px">
+						<div class="l-estimate__upload-info">
+							<span style="font-size: 14px; font-weight: 500">
+								Вы можете загрузить файл или заполнить список
+								<br />
+								артикулов
+							</span>
+							<p style="margin-top: 15px; font-size: 14px; font-weight: 300">
 								Файл должен быть в формате CSV,XLS или XLSX и содержать обязательные колонки "Артикул
 								или кросс-код" и "Количество".
 							</p>
@@ -40,5 +53,7 @@
 				</div>
 			</section>
 		</main>
+
+		<script src="main.js"></script>
 	</body>
 </html>
