@@ -30,6 +30,9 @@ h2 {
 	font-size: 16px;
 	line-height: 22px;
 }
+.bold {
+	font-weight: 700;
+}
 .medium {
 	font-weight: 500;
 }
@@ -94,4 +97,54 @@ h2 {
 
 .l-estimate__upload-btns button:hover {
 	background-color: #5d5fef3f;
+}
+
+.l-estimate__modal::backdrop {
+	background: rgba(0, 0, 0, 0.6);
+}
+.l-estimate__modal {
+	margin: auto;
+	background: unset;
+	border: unset;
+	width: 100vw;
+}
+.l-estimate__modal-content {
+	max-width: 1580px;
+	width: 100%;
+	margin: 0 auto;
+	border-radius: 20px;
+	padding: 46px 32px;
+	background-color: white;
+}
+
+.close-modal-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: unset;
+	border: unset;
+	cursor: pointer;
+}
+.i-close {
+	position: relative;
+	width: 24px;
+	height: 24px;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		width: 2px;
+		height: 100%;
+		background-color: #5d5fef;
+		top: 0;
+	}
+
+	&::before {
+		transform: rotate(45deg);
+	}
+
+	&::after {
+		transform: rotate(-45deg);
+	}
 }
