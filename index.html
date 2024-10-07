@@ -27,12 +27,12 @@
 						/>
 
 						<div class="l-estimate__upload-info">
-							<span style="font-size: 14px; font-weight: 500">
+							<span class="fs-14 medium">
 								Вы можете загрузить файл или заполнить список
 								<br />
 								артикулов
 							</span>
-							<p style="margin-top: 15px; font-size: 14px; font-weight: 300">
+							<p class="fs-14 light" style="margin-top: 15px">
 								Файл должен быть в формате CSV,XLS или XLSX и содержать обязательные колонки "Артикул
 								или кросс-код" и "Количество".
 							</p>
@@ -60,13 +60,81 @@
 								<i class="i-close"></i>
 							</button>
 						</header>
-						<section class="l-estimate__modal-section">
-							
-						</section>
-						<footer style="display: flex; align-items: center; gap: 10px">
-							<button>Обработать</button>
-							<button>Сбросить</button>
-						</footer>
+						<form action="">
+							<section class="l-estimate__modal-section">
+								<div class="l-block">
+									<span class="fs-14 medium">Загрузите файл для проценки</span>
+									<p class="fs-14 light" style="margin-top: 10px">
+										Файл должен быть в формате CSV,XLS или XLSX и содержать обязательные колонки
+										"Артикул или кросс-код" и "Количество".
+									</p>
+									<p class="fs-14 light" style="margin-top: 10px">
+										Вы можете скачать
+										<span class="bold">шаблон файла</span>
+										 и заполнить его для последующей загрузки на портал
+									</p>
+									<div style="margin-top: 16px">
+										<label class="l-button-upload">
+											<input type="file" name="file" id="upload-file-i" hidden />
+											<i class="i-icon i-20">
+												<img src="./assets/img/upload.svg" alt="" />
+											</i>
+											<span>Загрузить файл</span>
+										</label>
+									</div>
+
+									<div class="l-number-table">
+										<span class="fs-14 medium">Укажите номера столбцов с данными вашего файла</span>
+										<ul class="l-number-table__list">
+											<li>
+												<label class="l-number-table__label">
+													<span>Артикул *</span>
+													<input
+														type="number"
+														name="number"
+														class="l-number-table__input"
+														placeholder="Номер столбца"
+														required
+													/>
+												</label>
+											</li>
+											<li>
+												<label class="l-number-table__label">
+													<span>Кол-во *</span>
+													<input
+														type="number"
+														name="number"
+														class="l-number-table__input"
+														placeholder="Номер столбца"
+														required
+													/>
+												</label>
+											</li>
+											<li>
+												<label class="l-number-table__label">
+													<span>Наименование *</span>
+													<input
+														type="number"
+														name="number"
+														class="l-number-table__input"
+														placeholder="Номер столбца"
+														required
+													/>
+												</label>
+											</li>
+										</ul>
+										<div class="">
+											<span class="fs-14 light">* Поля обязательные для заполнения</span>
+										</div>
+									</div>
+								</div>
+								<div class="l-block"></div>
+							</section>
+							<footer style="display: flex; align-items: center; gap: 10px">
+								<button>Обработать</button>
+								<button>Сбросить</button>
+							</footer>
+						</form>
 					</div>
 				</dialog>
 			</section>

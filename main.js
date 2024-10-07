@@ -10,6 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	closeModalBtn.addEventListener('click', () => {
+		document.querySelector('.l-button-upload span').textContent = 'Загрузить файл';
 		modal.close();
+	});
+
+	document.getElementById('upload-file-i').addEventListener('change', function (event) {
+		const file = event.target.files[0];
+		if (file) {
+			document.querySelector('.l-button-upload span').textContent = file.name;
+		}
 	});
 });
