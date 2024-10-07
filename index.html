@@ -37,7 +37,9 @@
 								или кросс-код" и "Количество".
 							</p>
 
-							<div class="l-estimate__upload-btns">
+							<br style="display: block; margin-top: 30px" />
+
+							<div class="l-estimate__upload-btns js-estimate-upload-btns">
 								<button>
 									<img src="./assets/img/btn-1.svg" alt="" />
 									<span>Загрузить прайс</span>
@@ -92,7 +94,7 @@
 													<input
 														type="number"
 														name="number"
-														class="l-number-table__input"
+														class="l-number-table__input l-input"
 														placeholder="Номер столбца"
 														required
 													/>
@@ -104,7 +106,7 @@
 													<input
 														type="number"
 														name="number"
-														class="l-number-table__input"
+														class="l-number-table__input l-input"
 														placeholder="Номер столбца"
 														required
 													/>
@@ -116,7 +118,7 @@
 													<input
 														type="number"
 														name="number"
-														class="l-number-table__input"
+														class="l-number-table__input l-input"
 														placeholder="Номер столбца"
 														required
 													/>
@@ -124,13 +126,34 @@
 											</li>
 										</ul>
 										<div class="">
-											<span class="fs-14 light">* Поля обязательные для заполнения</span>
+											<span
+												class="fs-14 light"
+												style="opacity: 50%; margin-top: 7px; display: block"
+											>
+												* Поля обязательные для заполнения
+											</span>
 										</div>
 									</div>
 								</div>
-								<div class="l-block"></div>
+								<div class="l-block">
+									<span class="fs-14 medium">Загрузите файл для проценки</span>
+									<br style="margin-top: 10px; display: block" />
+									<span class="fs-14 light">Артикулы или кросс-коды *</span>
+									<div class="l-estimate__modal-textarea">
+										<textarea
+											class="l-input fs-14"
+											placeholder="Вставьте список артикулов или кросс-кодов - каждый артикул должен быть с новой строки"
+											name=""
+											id=""
+											cols="30"
+											rows="15"
+											style="resize: none"
+											required
+										></textarea>
+									</div>
+								</div>
 							</section>
-							<footer style="display: flex; align-items: center; gap: 10px">
+							<footer class="l-estimate__modal-footer">
 								<button>Обработать</button>
 								<button>Сбросить</button>
 							</footer>

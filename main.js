@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-	const openModalBtns = document.querySelector('.l-estimate__upload-btns');
+	const openModalBtns = document.querySelector('.js-estimate-upload-btns');
 	const modal = document.querySelector('.l-estimate__modal');
 	const closeModalBtn = modal.querySelector('.close-modal-btn');
 

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main>
+			<section class="l-estimate">
+				<div class="container">
+					<div class="l-estimate-table__container">
+						<div class="l-estimate__upload-btns js-estimate-upload-btns">
+							<button>
+								<img src="./assets/img/btn-1.svg" alt="" />
+								<span>Загрузить новый</span>
+							</button>
+						</div>
+						<div class="l-estimate-table">
+							<div class="l-header">
+								<label class="l-estimate-table__checkbox">
+									<input type="checkbox" class="l-estimate-table__checkbox-input" />
+									<span>Выбрать все</span>
+								</label>
+								<button>
+									<span>Артикул</span>
+									<i class="i-arrows"></i>
+								</button>
+								<button>
+									<span>Наименование</span>
+									<i class="i-arrows"></i>
+								</button>
+								<button>
+									<span>Кол-во</span>
+									<i class="i-arrows"></i>
+								</button>
+								<button>
+									<span>Совпало</span>
+									<i class="i-arrows"></i>
+								</button>
+							</div>
+
+							<ol class="l-estimate-table__list">
+								<li class="l-estimate-table__item">
+									<div class="l-estimate-table__item-head">
+										<a href="javascript:void(0)" class="l-estimate-table__item-status">
+											Не найдено
+										</a>
+										<span>5320-5001010</span>
+										<span class="long">
+											Обойма диффер. разд. коробки Z=44 зуб. с сателит. (ПАО)
+										</span>
+										<span>10</span>
+										<span>0</span>
+									</div>
+									<div class="l-estimate-table__item-body"></div>
+								</li>
+								<li class="l-estimate-table__item">
+									<div class="l-estimate-table__item-head">
+										<a href="javascript:void(0)" class="l-estimate-table__item-status">
+											Не найдено
+										</a>
+										<span>5320-5001010</span>
+										<span class="long">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, omnis
+											iusto, neque rem consectetur sapiente adipisci exercitationem reiciendis
+											reprehenderit possimus sequi fuga quas, tempora ab officiis itaque doloribus
+											nam maxime.
+										</span>
+										<span>10</span>
+										<span>0</span>
+									</div>
+									<div class="l-estimate-table__item-body"></div>
+								</li>
+								<!-- АКТИВНЫЙ КЛАСС active -->
+								<li class="l-estimate-table__item active">
+									<div class="l-estimate-table__item-head">
+										<!-- АКТИВНЫЙ КЛАСС active -->
+										<a href="javascript:void(0)" class="l-estimate-table__item-status active">
+											Найдено
+										</a>
+										<span>5320-5001010</span>
+										<span class="long">
+											Обойма диффер. разд. коробки Z=44 зуб. с сателит. (ПАО)
+										</span>
+										<span>10</span>
+										<span>0</span>
+									</div>
+									<div class="l-estimate-table__item-body">
+										<div class="l-head">
+											<span>№</span>
+											<span>Артикул</span>
+											<span>Производитель</span>
+											<span>Наименование</span>
+											<span>Кол-во</span>
+											<span>Цена</span>
+										</div>
+										<ol class="l-item-body__list">
+											<li>
+												<label class="l-estimate-table__checkbox">
+													<input type="checkbox" class="l-estimate-table__checkbox-input" />
+												</label>
+												<span>1</span>
+												<span>5320-5001010</span>
+												<span>КАМАЗ</span>
+												<span class="long">Обойма диффер. разд. коробки с сателит.</span>
+
+												<div class="l-counter" data-index="2">
+													<button class="decrease">-</button>
+													<input type="number" class="value" value="1" min="0" />
+													<button class="increase">+</button>
+												</div>
+
+												<span>305.99 Р</span>
+												<button class="l-remove">
+													<img src="./assets/img/remove.svg" alt="remove-icon" />
+												</button>
+											</li>
+										</ol>
+									</div>
+								</li>
+								<li class="l-estimate-table__item">
+									<div class="l-estimate-table__item-head">
+										<!-- АКТИВНЫЙ КЛАСС active -->
+										<a href="javascript:void(0)" class="l-estimate-table__item-status">Найдено</a>
+										<span>5320-5001010</span>
+										<span class="long">
+											Обойма диффер. разд. коробки Z=44 зуб. с сателит. (ПАО)
+										</span>
+										<span>10</span>
+										<span>0</span>
+									</div>
+									<div class="l-estimate-table__item-body"></div>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<dialog class="l-estimate__modal">
+				<div class="l-estimate__modal-content">
+					<header style="display: flex; align-items: center; justify-content: space-between">
+						<span class="fs-16 bold">Загрузите прайс или передайте список артикулов</span>
+						<button class="close-modal-btn">
+							<i class="i-close"></i>
+						</button>
+					</header>
+					<form action="">
+						<section class="l-estimate__modal-section">
+							<div class="l-block">
+								<span class="fs-14 medium">Загрузите файл для проценки</span>
+								<p class="fs-14 light" style="margin-top: 10px">
+									Файл должен быть в формате CSV,XLS или XLSX и содержать обязательные колонки
+									"Артикул или кросс-код" и "Количество".
+								</p>
+								<p class="fs-14 light" style="margin-top: 10px">
+									Вы можете скачать
+									<span class="bold">шаблон файла</span>
+									 и заполнить его для последующей загрузки на портал
+								</p>
+								<div style="margin-top: 16px">
+									<label class="l-button-upload">
+										<input type="file" name="file" id="upload-file-i" hidden />
+										<i class="i-icon i-20">
+											<img src="./assets/img/upload.svg" alt="" />
+										</i>
+										<span>Загрузить файл</span>
+									</label>
+								</div>
+
+								<div class="l-number-table">
+									<span class="fs-14 medium">Укажите номера столбцов с данными вашего файла</span>
+									<ul class="l-number-table__list">
+										<li>
+											<label class="l-number-table__label">
+												<span>Артикул *</span>
+												<input
+													type="number"
+													name="number"
+													class="l-number-table__input l-input"
+													placeholder="Номер столбца"
+													required
+												/>
+											</label>
+										</li>
+										<li>
+											<label class="l-number-table__label">
+												<span>Кол-во *</span>
+												<input
+													type="number"
+													name="number"
+													class="l-number-table__input l-input"
+													placeholder="Номер столбца"
+													required
+												/>
+											</label>
+										</li>
+										<li>
+											<label class="l-number-table__label">
+												<span>Наименование *</span>
+												<input
+													type="number"
+													name="number"
+													class="l-number-table__input l-input"
+													placeholder="Номер столбца"
+													required
+												/>
+											</label>
+										</li>
+									</ul>
+									<div class="">
+										<span class="fs-14 light" style="opacity: 50%; margin-top: 7px; display: block">
+											* Поля обязательные для заполнения
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="l-block">
+								<span class="fs-14 medium">Загрузите файл для проценки</span>
+								<br style="margin-top: 10px; display: block" />
+								<span class="fs-14 light">Артикулы или кросс-коды *</span>
+								<div class="l-estimate__modal-textarea">
+									<textarea
+										class="l-input fs-14"
+										placeholder="Вставьте список артикулов или кросс-кодов - каждый артикул должен быть с новой строки"
+										name=""
+										id=""
+										cols="30"
+										rows="15"
+										style="resize: none"
+										required
+									></textarea>
+								</div>
+							</div>
+						</section>
+						<footer class="l-estimate__modal-footer">
+							<button>Обработать</button>
+							<button>Сбросить</button>
+						</footer>
+					</form>
+				</div>
+			</dialog>
+		</main>
+
+		<script src="main.js"></script>
+	</body>
+</html>
