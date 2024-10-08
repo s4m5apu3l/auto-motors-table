@@ -8,6 +8,18 @@
 	border: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+p {
+	text-wrap: pretty;
+}
+
 body {
 	font-family: 'Inter', Arial, sans-serif;
 	min-width: 320px;
@@ -43,6 +55,20 @@ h2 {
 }
 .light {
 	font-weight: 300;
+}
+
+dialog[open] {
+	translate: 0 0;
+}
+
+@starting-style {
+	dialog[open] {
+		translate: 0 100vh;
+	}
+}
+dialog {
+	transition: translate 0.4s ease-out, overlay 0.4s ease-out allow-discrete, display 0.4s ease-out allow-discrete;
+	translate: 0 100vh;
 }
 
 .l-estimate {
