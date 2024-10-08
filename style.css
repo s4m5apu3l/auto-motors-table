@@ -73,51 +73,59 @@ dialog {
 
 .l-estimate {
 	padding: 120px 0;
-	& .l-estimate__upload {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 100px;
+}
+.l-estimate__upload {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 100px;
+	@media screen and (max-width: 960px) {
+		flex-direction: column;
 	}
-
-	& .l-estimate__upload-info {
-		max-width: 490px;
-		width: 100%;
+}
+.l-estimate__upload-info {
+	max-width: 490px;
+	width: 100%;
+	@media screen and (max-width: 960px) {
+		text-align: center;
 	}
+}
+.l-estimate__upload-btns {
+	display: flex;
+	align-items: center;
+	gap: 13px;
 
-	& .l-estimate__upload-btns {
+	& button {
 		display: flex;
+		flex-direction: column;
+		gap: 5px;
 		align-items: center;
-		gap: 13px;
-
-		& button {
-			display: flex;
-			flex-direction: column;
-			gap: 5px;
-			align-items: center;
-			justify-content: end;
-			height: 126px;
-			width: 162px;
-			background-color: unset;
-			outline: none;
-			border: 1px dashed #151515;
-			border-radius: 10px;
-			transition: all 0.4s ease;
-			cursor: pointer;
-			padding-bottom: 18px;
-			& img {
-				width: 52px;
-				height: auto;
-			}
-
-			& span {
-				font-size: 12px;
-				height: 29px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
+		justify-content: end;
+		height: 126px;
+		width: 162px;
+		background-color: unset;
+		outline: none;
+		border: 1px dashed #151515;
+		border-radius: 10px;
+		transition: all 0.4s ease;
+		cursor: pointer;
+		padding-bottom: 18px;
+		& img {
+			width: 52px;
+			height: auto;
 		}
+
+		& span {
+			font-size: 12px;
+			height: 29px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	@media screen and (max-width: 960px) {
+		justify-content: center;
 	}
 }
 
@@ -140,6 +148,7 @@ dialog {
 	background: unset;
 	border: unset;
 	width: 100vw;
+	min-width: 320px;
 }
 .l-estimate__modal-content {
 	max-width: 1580px;
@@ -148,6 +157,9 @@ dialog {
 	border-radius: 20px;
 	padding: 46px 32px;
 	background-color: white;
+	@media screen and (max-width: 940px) {
+		padding: 20px;
+	}
 }
 
 .close-modal-btn {
@@ -194,6 +206,14 @@ dialog {
 		border-radius: 5px;
 	}
 }
+@media screen and (max-width: 940px) {
+	.l-estimate__modal-section {
+		grid-template-columns: 1fr;
+		& .l-block {
+			padding: 16px;
+		}
+	}
+}
 .l-estimate__modal-section .l-block:last-child {
 	height: 100%;
 }
@@ -237,6 +257,9 @@ dialog {
 	align-items: center;
 	gap: 12px;
 	margin-top: 14px;
+	@media screen and (max-width: 940px) {
+		flex-wrap: wrap;
+	}
 }
 .l-number-table__label {
 	display: flex;
@@ -261,36 +284,44 @@ dialog {
 	display: flex;
 	align-items: center;
 	gap: 12px;
-	& button {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 166px;
-		padding: 12px 0;
-		border-radius: 7px;
-		cursor: pointer;
-	}
 }
-
-.l-estimate__modal-footer button:first-child {
+.l-btn__base {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	width: 166px;
+	padding: 12px 0;
+	border-radius: 7px;
+	cursor: pointer;
 	background-color: #5d5fef;
 	color: white;
 }
-.l-estimate__modal-footer button:last-child {
+
+.l-btn__base._gray {
 	background-color: #f5f7fa;
 	color: #3a3a49;
+}
+
+.l-estimate-table__unscroll {
+	overflow-x: auto;
+	width: 100%;
 }
 
 .l-estimate-table__container {
 	display: flex;
 	align-items: flex-start;
 	gap: 26px;
+	@media screen and (max-width: 890px) {
+		flex-direction: column;
+	}
 }
 .l-estimate-table {
 	border: 1px solid #e9eff4;
 	border-radius: 10px;
 	padding: 30px 34px;
-	width: 100%;
+	width: 1332px;
+
 	& .l-header {
 		display: grid;
 		align-items: center;
@@ -306,6 +337,9 @@ dialog {
 			cursor: pointer;
 			color: #878790;
 		}
+	}
+	& .l-item {
+		width: auto;
 	}
 }
 .l-estimate-table__list {
@@ -349,12 +383,6 @@ dialog {
 	align-items: center;
 	gap: 20px;
 	grid-template-columns: 130px 130px 460px 70px 70px;
-	& .long {
-		text-overflow: ellipsis;
-		overflow: hidden;
-		white-space: nowrap;
-		max-width: 100%;
-	}
 }
 .i-arrows {
 	background: url("data:image/svg+xml,%3Csvg width='6' height='9' viewBox='0 0 6 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.08711 4L4.91289 4C5.34007 4 5.57052 3.49894 5.29252 3.1746L3.37963 0.942899C3.18008 0.710094 2.81992 0.710094 2.62037 0.942899L0.707482 3.1746C0.429479 3.49894 0.659934 4 1.08711 4Z' fill='%235D5FEF'/%3E%3Cpath d='M4.91289 5H1.08711C0.659934 5 0.429479 5.50106 0.707482 5.8254L2.62037 8.0571C2.81992 8.28991 3.18008 8.28991 3.37963 8.0571L5.29252 5.8254C5.57052 5.50106 5.34007 5 4.91289 5Z' fill='%23A5A6F6'/%3E%3C/svg%3E%0A")
@@ -406,4 +434,95 @@ dialog {
 	border-radius: 5px;
 	border: 1px solid #e4e5ff;
 	padding: 10px 8px;
+
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	& input {
+		width: 100%;
+		color: #5d5fef;
+		text-align: center;
+	}
+	& button {
+		color: #5d5fef;
+		background-color: unset;
+		cursor: pointer;
+	}
+}
+
+.l-counter input::-webkit-outer-spin-button,
+.l-counter input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.l-counter input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+.l-estimate-table__item-body {
+	border-radius: 0 0 10px 10px;
+	border: 1px solid #e9eff4;
+	display: none;
+
+	& .l-head {
+		background-color: #e4e5ff;
+		height: 42px;
+		display: grid;
+		align-items: center;
+		gap: 20px;
+		grid-template-columns: 30px 100px 150px 390px 70px 50px;
+		padding-left: 50px;
+		font-size: 13px;
+		color: #5d5fef;
+	}
+
+	& .l-item-body__list {
+		& li {
+			padding: 10px 0 32px 18px;
+			display: grid;
+			align-items: center;
+			gap: 20px;
+			grid-template-columns: 20px 10px 120px 100px 405px 100px 100px 1fr;
+
+			& .l-item.colored {
+				color: #5d5fef;
+			}
+		}
+	}
+}
+
+.l-estimate-table__item.active .l-estimate-table__item-body {
+	display: block;
+}
+.l-remove {
+	display: flex;
+	justify-content: center;
+	& .l-remove-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 30px;
+		height: 30px;
+		background-color: #ff00001f;
+		outline: none;
+		border: none;
+		cursor: pointer;
+		border-radius: 50%;
+	}
+}
+.l-estimate-table__footer {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 18px;
+	@media screen and (max-width: 1556px) {
+		justify-content: flex-start;
+	}
+}
+.l-estimate__upload-img {
+	width: 100%;
+	max-width: 355px;
+}
+
+@media screen and (max-width: 560px) {
 }
