@@ -21,25 +21,3 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 });
-const delayPromise = delay =>
-	new Promise((res, rej) => {
-		setTimeout(res, delay);
-	});
-
-setTimeout(() => console.log(1), 1000);
-
-delayPromise(1000).then(res => console.log(2));
-
-setTimeout(() => console.log(3), 100);
-
-delayPromise(2000).then(res => console.log(4));
-
-setTimeout(() => console.log(5), 2000);
-
-delayPromise(1000).then(res => console.log(6));
-
-setTimeout(() => console.log(7), 1000);
-
-delayPromise(5000).then(res => console.log(8));
-
-//  3 1 2 6  7 4 5 8
